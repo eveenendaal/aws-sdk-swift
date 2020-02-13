@@ -20,7 +20,8 @@ class SSMTests: XCTestCase {
         secretAccessKey: "secret",
         region: .useast1,
         endpoint: ProcessInfo.processInfo.environment["SSM_ENDPOINT"] ?? "http://localhost:4583",
-        middlewares: [AWSLoggingMiddleware()]
+        middlewares: [AWSLoggingMiddleware()],
+        httpClientProvider: .createNew
     )
 
     class TestData {

@@ -33,7 +33,7 @@ public struct EFS {
         region: AWSSDKSwiftCore.Region? = nil,
         endpoint: String? = nil,
         middlewares: [AWSServiceMiddleware] = [],
-        httpClientProvider: AWSClient.HTTPClientProvider = .useAWSClientShared
+        httpClientProvider: AWSClient.HTTPClientProvider
     ) {
         self.client = AWSClient(
             accessKeyId: accessKeyId,

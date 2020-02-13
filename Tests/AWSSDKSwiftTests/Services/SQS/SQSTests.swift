@@ -19,7 +19,8 @@ class SQSTests: XCTestCase {
         accessKeyId: "key",
         secretAccessKey: "secret",
         region: .useast1,
-        endpoint: ProcessInfo.processInfo.environment["SQS_ENDPOINT"] ?? "http://localhost:4576"
+        endpoint: ProcessInfo.processInfo.environment["SQS_ENDPOINT"] ?? "http://localhost:4576",
+        httpClientProvider: .createNew
     )
 
     class TestData {
