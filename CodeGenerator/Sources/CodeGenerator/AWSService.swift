@@ -162,6 +162,7 @@ struct AWSService {
             type = .list(shape, max: max, min: min)
 
         case "structure":
+            let payloadName = json["payload"].string
             // Note that we need to do some extra preprocessing to clean up the formatting of the structure. Sometimes we have a "flattened" object which does not have extra fields (typically named `members`) wrapping the contents. Other times we do, and need to clear that out.
             var structure: [String: ShapeType] = [:]
             for (_, _struct) in json["members"].dictionaryValue {
@@ -205,6 +206,12 @@ struct AWSService {
                 default:
                     break
                 }
+                // if we have a data blob, if it is the payload we need to set its encoding to blob
+                if case .blob = shape.type {
+                    if name == payloadName {
+                        encoding = .blob
+                    }
+                }
                 // If the list is flattened, then we need to pull out the right location name
                 if memberLocationName != nil, shapeJSON["flattened"].bool == true {
                     location = Location(json: shapeJSON["member"])
@@ -228,7 +235,7 @@ struct AWSService {
                 )
             }.sorted{ $0.name.lowercased() < $1.name.lowercased() }
 
-            let payloadMember = members.first(where:{$0.name == json["payload"].string})
+            let payloadMember = members.first(where:{$0.name == payloadName})
             let xmlNamespace = payloadMember?.xmlNamespace?.attributeMap["uri"] as? String
             let shape = StructureShape(members: members, payload: json["payload"].string, xmlNamespace: xmlNamespace)
             type = .structure(shape)
