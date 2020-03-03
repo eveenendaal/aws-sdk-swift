@@ -165,9 +165,9 @@ extension S3Control {
     }
 
     public struct CreateAccessPointRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The AWS account ID for the owner of the bucket for which you want to create an access point.
@@ -207,8 +207,8 @@ extension S3Control {
     }
 
     public struct CreateJobRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
         ]
 
         public let accountId: String
@@ -284,9 +284,9 @@ extension S3Control {
     }
 
     public struct DeleteAccessPointPolicyRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The account ID for the account that owns the specified access point.
@@ -312,9 +312,9 @@ extension S3Control {
     }
 
     public struct DeleteAccessPointRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The account ID for the account that owns the specified access point.
@@ -340,8 +340,8 @@ extension S3Control {
     }
 
     public struct DeletePublicAccessBlockRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
         ]
 
         /// The account ID for the Amazon Web Services account whose PublicAccessBlock configuration you want to remove.
@@ -361,9 +361,9 @@ extension S3Control {
     }
 
     public struct DescribeJobRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "JobId", location: .uri(locationName: "id"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "JobId", location: .uri(locationName: "id"))
         ]
 
         public let accountId: String
@@ -402,9 +402,9 @@ extension S3Control {
     }
 
     public struct GetAccessPointPolicyRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The account ID for the account that owns the specified access point.
@@ -444,9 +444,9 @@ extension S3Control {
     }
 
     public struct GetAccessPointPolicyStatusRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The account ID for the account that owns the specified access point.
@@ -486,9 +486,9 @@ extension S3Control {
     }
 
     public struct GetAccessPointRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The account ID for the account that owns the specified access point.
@@ -563,8 +563,8 @@ extension S3Control {
     }
 
     public struct GetPublicAccessBlockRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id"))
         ]
 
         /// The account ID for the Amazon Web Services account whose PublicAccessBlock configuration you want to retrieve.
@@ -584,8 +584,8 @@ extension S3Control {
     }
 
     public struct JobDescriptor: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "FailureReasons", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "FailureReasons", encoding: .list(member:"member"))
         ]
 
         /// Indicates whether confirmation is required before Amazon S3 begins running the specified job. Confirmation is required only for jobs created through the Amazon S3 console.
@@ -777,8 +777,8 @@ extension S3Control {
     }
 
     public struct JobManifestSpec: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "Fields", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "Fields", encoding: .list(member:"member"))
         ]
 
         /// If the specified manifest object is in the S3BatchOperations_CSV_20180820 format, this element describes which columns contain the required data.
@@ -911,11 +911,11 @@ extension S3Control {
     }
 
     public struct ListAccessPointsRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Bucket", location: .querystring(locationName: "bucket")), 
-            AWSShapeMember(label: "MaxResults", location: .querystring(locationName: "maxResults")), 
-            AWSShapeMember(label: "NextToken", location: .querystring(locationName: "nextToken"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Bucket", location: .querystring(locationName: "bucket")), 
+            AWSMemberEncoding(label: "MaxResults", location: .querystring(locationName: "maxResults")), 
+            AWSMemberEncoding(label: "NextToken", location: .querystring(locationName: "nextToken"))
         ]
 
         /// The AWS account ID for owner of the bucket whose access points you want to list.
@@ -953,8 +953,8 @@ extension S3Control {
     }
 
     public struct ListAccessPointsResult: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccessPointList", encoding: .list(member:"AccessPoint"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccessPointList", encoding: .list(member:"AccessPoint"))
         ]
 
         /// Contains identification and configuration information for one or more access points associated with the specified bucket.
@@ -974,11 +974,11 @@ extension S3Control {
     }
 
     public struct ListJobsRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "JobStatuses", location: .querystring(locationName: "jobStatuses"), encoding: .list(member:"member")), 
-            AWSShapeMember(label: "MaxResults", location: .querystring(locationName: "maxResults")), 
-            AWSShapeMember(label: "NextToken", location: .querystring(locationName: "nextToken"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "JobStatuses", location: .querystring(locationName: "jobStatuses"), encoding: .list(member:"member")), 
+            AWSMemberEncoding(label: "MaxResults", location: .querystring(locationName: "maxResults")), 
+            AWSMemberEncoding(label: "NextToken", location: .querystring(locationName: "nextToken"))
         ]
 
         public let accountId: String
@@ -1013,8 +1013,8 @@ extension S3Control {
     }
 
     public struct ListJobsResult: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "Jobs", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "Jobs", encoding: .list(member:"member"))
         ]
 
         /// The list of current jobs and jobs that have ended within the last 30 days.
@@ -1034,8 +1034,8 @@ extension S3Control {
     }
 
     public struct PolicyStatus: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "IsPublic", location: .body(locationName: "IsPublic"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "IsPublic", location: .body(locationName: "IsPublic"))
         ]
 
         public let isPublic: Bool?
@@ -1050,11 +1050,11 @@ extension S3Control {
     }
 
     public struct PublicAccessBlockConfiguration: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "BlockPublicAcls", location: .body(locationName: "BlockPublicAcls")), 
-            AWSShapeMember(label: "BlockPublicPolicy", location: .body(locationName: "BlockPublicPolicy")), 
-            AWSShapeMember(label: "IgnorePublicAcls", location: .body(locationName: "IgnorePublicAcls")), 
-            AWSShapeMember(label: "RestrictPublicBuckets", location: .body(locationName: "RestrictPublicBuckets"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "BlockPublicAcls", location: .body(locationName: "BlockPublicAcls")), 
+            AWSMemberEncoding(label: "BlockPublicPolicy", location: .body(locationName: "BlockPublicPolicy")), 
+            AWSMemberEncoding(label: "IgnorePublicAcls", location: .body(locationName: "IgnorePublicAcls")), 
+            AWSMemberEncoding(label: "RestrictPublicBuckets", location: .body(locationName: "RestrictPublicBuckets"))
         ]
 
         /// Specifies whether Amazon S3 should block public access control lists (ACLs) for buckets in this account. Setting this element to TRUE causes the following behavior:   PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.   PUT Object calls fail if the request includes a public ACL.   PUT Bucket calls fail if the request includes a public ACL.   Enabling this setting doesn't affect existing policies or ACLs.
@@ -1082,9 +1082,9 @@ extension S3Control {
     }
 
     public struct PutAccessPointPolicyRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "Name", location: .uri(locationName: "name"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "Name", location: .uri(locationName: "name"))
         ]
 
         /// The AWS account ID for owner of the bucket associated with the specified access point.
@@ -1117,9 +1117,9 @@ extension S3Control {
         /// The key for the payload
         public static let payloadPath: String? = "PublicAccessBlockConfiguration"
         public static let _xmlNamespace: String? = "http://awss3control.amazonaws.com/doc/2018-08-20/"
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "PublicAccessBlockConfiguration", location: .body(locationName: "PublicAccessBlockConfiguration"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "PublicAccessBlockConfiguration", location: .body(locationName: "PublicAccessBlockConfiguration"))
         ]
 
         /// The account ID for the Amazon Web Services account whose PublicAccessBlock configuration you want to set.
@@ -1143,8 +1143,8 @@ extension S3Control {
     }
 
     public struct S3AccessControlList: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "Grants", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "Grants", encoding: .list(member:"member"))
         ]
 
         public let grants: [S3Grant]?
@@ -1189,9 +1189,9 @@ extension S3Control {
     }
 
     public struct S3CopyObjectOperation: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccessControlGrants", encoding: .list(member:"member")), 
-            AWSShapeMember(label: "NewObjectTagging", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccessControlGrants", encoding: .list(member:"member")), 
+            AWSMemberEncoding(label: "NewObjectTagging", encoding: .list(member:"member"))
         ]
 
         public let accessControlGrants: [S3Grant]?
@@ -1335,8 +1335,8 @@ extension S3Control {
     }
 
     public struct S3ObjectMetadata: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "UserMetadata", encoding: .map(entry:"entry", key: "key", value: "value"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "UserMetadata", encoding: .map(entry:"entry", key: "key", value: "value"))
         ]
 
         public let cacheControl: String?
@@ -1442,8 +1442,8 @@ extension S3Control {
     }
 
     public struct S3SetObjectTaggingOperation: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "TagSet", encoding: .list(member:"member"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "TagSet", encoding: .list(member:"member"))
         ]
 
         public let tagSet: [S3Tag]?
@@ -1486,10 +1486,10 @@ extension S3Control {
     }
 
     public struct UpdateJobPriorityRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "JobId", location: .uri(locationName: "id")), 
-            AWSShapeMember(label: "Priority", location: .querystring(locationName: "priority"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "JobId", location: .uri(locationName: "id")), 
+            AWSMemberEncoding(label: "Priority", location: .querystring(locationName: "priority"))
         ]
 
         public let accountId: String
@@ -1538,11 +1538,11 @@ extension S3Control {
     }
 
     public struct UpdateJobStatusRequest: AWSShape {
-        public static var _members: [AWSShapeMember] = [
-            AWSShapeMember(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
-            AWSShapeMember(label: "JobId", location: .uri(locationName: "id")), 
-            AWSShapeMember(label: "RequestedJobStatus", location: .querystring(locationName: "requestedJobStatus")), 
-            AWSShapeMember(label: "StatusUpdateReason", location: .querystring(locationName: "statusUpdateReason"))
+        public static var _encoding = [
+            AWSMemberEncoding(label: "AccountId", location: .header(locationName: "x-amz-account-id")), 
+            AWSMemberEncoding(label: "JobId", location: .uri(locationName: "id")), 
+            AWSMemberEncoding(label: "RequestedJobStatus", location: .querystring(locationName: "requestedJobStatus")), 
+            AWSMemberEncoding(label: "StatusUpdateReason", location: .querystring(locationName: "statusUpdateReason"))
         ]
 
         public let accountId: String
