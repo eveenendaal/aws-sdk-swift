@@ -426,6 +426,7 @@ extension Route53 {
         public let changeBatch: ChangeBatch
         /// The ID of the hosted zone that contains the resource record sets that you want to change.
         public let hostedZoneId: String
+        public static let _xmlNamespace: String? = "https://route53.amazonaws.com/doc/2013-04-01/"
 
         public init(changeBatch: ChangeBatch, hostedZoneId: String) {
             self.changeBatch = changeBatch
