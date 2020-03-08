@@ -417,6 +417,8 @@ extension Route53 {
     }
 
     public struct ChangeResourceRecordSetsRequest: AWSShape {
+        public static let payloadPath: String? = "ChangeResourceRecordSetsRequest"
+        public static let _xmlNamespace: String? = "https://route53.amazonaws.com/doc/2013-04-01/"
         public static var _members: [AWSShapeMember] = [
             AWSShapeMember(label: "ChangeBatch", required: true, type: .structure), 
             AWSShapeMember(label: "HostedZoneId", location: .uri(locationName: "Id"), required: true, type: .string)
@@ -426,7 +428,6 @@ extension Route53 {
         public let changeBatch: ChangeBatch
         /// The ID of the hosted zone that contains the resource record sets that you want to change.
         public let hostedZoneId: String
-        public static let _xmlNamespace: String? = "https://route53.amazonaws.com/doc/2013-04-01/"
 
         public init(changeBatch: ChangeBatch, hostedZoneId: String) {
             self.changeBatch = changeBatch
