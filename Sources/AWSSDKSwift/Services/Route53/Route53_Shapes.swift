@@ -417,7 +417,6 @@ extension Route53 {
     }
 
     public struct ChangeResourceRecordSetsRequest: AWSShape {
-        public static let payloadPath: String? = "ChangeResourceRecordSetsRequest"
         public static let _xmlNamespace: String? = "https://route53.amazonaws.com/doc/2013-04-01/"
         public static var _members: [AWSShapeMember] = [
             AWSShapeMember(label: "ChangeBatch", required: true, type: .structure), 
